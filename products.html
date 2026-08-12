@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - MachineryHub China | Industrial Machinery Sourcing</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 自定义颜色变量 */
+        :root {
+            --primary: #1f2937;    /* 深灰色 */
+            --accent: #f97316;     /* 橙色 */
+            --text-light: #f3f4f6; /* 浅灰色文本 */
+        }
+        
+        /* 工业简约风格 - 微妙阴影和边框 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #111827;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        .accent-text {
+            color: #f97316;
+        }
+        
+        .accent-bg {
+            background-color: #f97316;
+        }
+        
+        .primary-bg {
+            background-color: #1f2937;
+        }
+        
+        .btn-primary {
+            background-color: #f97316;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(249, 115, 22, 0.3);
+        }
+        
+        .input-style {
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .input-style:focus {
+            border-color: #f97316;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- 导航栏 Navigation Bar -->
+    <nav class="primary-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 accent-bg rounded-lg flex items-center justify-center font-bold text-white">M</div>
+                    <span class="font-bold text-lg hidden sm:inline">MachineryHub China</span>
+                </div>
+                
+                <!-- 导航菜单 Navigation Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html#home" class="hover:text-orange-400 transition">Home</a>
+                    <a href="products.html" class="text-orange-400">Products</a>
+                    <a href="index.html#solutions" class="hover:text-orange-400 transition">Solutions</a>
+                    <a href="index.html#factory" class="hover:text-orange-400 transition">Factory</a>
+                    <a href="index.html#about" class="hover:text-orange-400 transition">About</a>
+                    <a href="index.html#contact" class="hover:text-orange-400 transition">Contact</a>
+                </div>
+                
+                <!-- 移动菜单按钮 Mobile Menu Button -->
+                <button class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 Hero Section -->
+    <section class="hero-gradient text-white py-20 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+                All <span class="accent-text">Product Categories</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Explore our comprehensive range of industrial machinery and equipment sourced from verified manufacturers
+            </p>
+        </div>
+    </section>
+
+    <!-- 产品分类卡片 Product Categories -->
+    <section class="py-20 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 标题 -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                    <span class="text-gray-900">Browse Our</span> <span class="accent-text">Categories</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Select a category to view detailed products, specifications, and pricing information
+                </p>
+            </div>
+
+            <!-- 分类网格 Categories Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 分类1: 金属表面处理 -->
+                <a href="category-surface.html" class="card-hover bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl no-underline">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 h-40 flex items-center justify-center">
+                        <div class="text-white text-6xl">✨</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Metal Surface Treatment</h3>
+                        <p class="text-sm text-gray-600 mb-4">Polishing, blasting, straightening and finishing equipment</p>
+                        <div class="text-orange-400 font-semibold text-sm">5 Products →</div>
+                    </div>
+                </a>
+
+                <!-- 分类2: 管材加工 -->
+                <a href="category-tube.html" class="card-hover bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl no-underline">
+                    <div class="bg-gradient-to-br from-green-600 to-green-700 h-40 flex items-center justify-center">
+                        <div class="text-white text-6xl">🔧</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Tube Processing Equipment</h3>
+                        <p class="text-sm text-gray-600 mb-4">CNC bending and automatic cutting machinery</p>
+                        <div class="text-orange-400 font-semibold text-sm">2 Products →</div>
+                    </div>
+                </a>
+
+                <!-- 分类3: 工业阀门 -->
+                <a href="category-valve.html" class="card-hover bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl no-underline">
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-700 h-40 flex items-center justify-center">
+                        <div class="text-white text-6xl">🔩</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Valves & Fittings</h3>
+                        <p class="text-sm text-gray-600 mb-4">Industrial valves and pipe flanges in various materials</p>
+                        <div class="text-orange-400 font-semibold text-sm">2 Products →</div>
+                    </div>
+                </a>
+
+                <!-- 分类4: 其他工业设备 -->
+                <a href="category-other.html" class="card-hover bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl no-underline">
+                    <div class="bg-gradient-to-br from-red-600 to-red-700 h-40 flex items-center justify-center">
+                        <div class="text-white text-6xl">⚙️</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Other Industrial Equipment</h3>
+                        <p class="text-sm text-gray-600 mb-4">Additional machinery and specialized equipment solutions</p>
+                        <div class="text-orange-400 font-semibold text-sm">More →</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系 CTA -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Need Custom Solutions?</h2>
+            <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+                Contact our sourcing team for bulk orders, OEM customization, or specialized equipment requirements
+            </p>
+            <a href="index.html#contact" class="btn-primary px-8 py-3 rounded-lg font-semibold inline-block">
+                Request Custom Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 Footer -->
+    <footer class="primary-bg text-gray-300 py-12 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- 公司信息 Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-6 h-6 accent-bg rounded-lg flex items-center justify-center font-bold text-white text-sm">M</div>
+                        <span class="font-bold text-white">MachineryHub</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Strategic machinery sourcing partner connecting global buyers with Chinese manufacturers.</p>
+                </div>
+                
+                <!-- 产品链接 Product Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Products</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="category-surface.html" class="hover:text-orange-400 transition">Metal Surface Treatment</a></li>
+                        <li><a href="category-tube.html" class="hover:text-orange-400 transition">Tube Processing</a></li>
+                        <li><a href="category-valve.html" class="hover:text-orange-400 transition">Valve & Fittings</a></li>
+                        <li><a href="category-other.html" class="hover:text-orange-400 transition">Industrial Equipment</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 公司链接 Company Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="index.html#about" class="hover:text-orange-400 transition">About Us</a></li>
+                        <li><a href="index.html#factory" class="hover:text-orange-400 transition">Factory Network</a></li>
+                        <li><a href="index.html#contact" class="hover:text-orange-400 transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 更新订阅 Newsletter -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Stay Updated</h4>
+                    <p class="text-sm text-gray-400 mb-3">Subscribe to our sourcing insights and industry news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="input-style px-3 py-2 rounded-l-lg bg-gray-700 text-white text-sm flex-1 placeholder-gray-400" required>
+                        <button type="submit" class="accent-bg px-4 py-2 rounded-r-lg font-semibold hover:bg-orange-600 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- 页脚底部 Footer Bottom -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-400">
+                        © 2024 MachineryHub China. All rights reserved. | Strategic Sourcing Partner for Mechanical Equipment
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                        <a href="#" class="hover:text-orange-400 transition">Terms of Service</a>
+                        <a href="#" class="hover:text-orange-400 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-orange-400 transition">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 平滑滚动脚本 Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

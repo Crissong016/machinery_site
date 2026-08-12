@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Equipment - MachineryHub China</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 自定义颜色变量 */
+        :root {
+            --primary: #1f2937;    /* 深灰色 */
+            --accent: #f97316;     /* 橙色 */
+            --text-light: #f3f4f6; /* 浅灰色文本 */
+        }
+        
+        /* 工业简约风格 - 微妙阴影和边框 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #111827;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        .accent-text {
+            color: #f97316;
+        }
+        
+        .accent-bg {
+            background-color: #f97316;
+        }
+        
+        .primary-bg {
+            background-color: #1f2937;
+        }
+        
+        .btn-primary {
+            background-color: #f97316;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(249, 115, 22, 0.3);
+        }
+        
+        .input-style {
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .input-style:focus {
+            border-color: #f97316;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        }
+
+        .product-image {
+            background: linear-gradient(135deg, #fecaca 0%, #fed7aa 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- 导航栏 Navigation Bar -->
+    <nav class="primary-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 accent-bg rounded-lg flex items-center justify-center font-bold text-white">M</div>
+                    <span class="font-bold text-lg hidden sm:inline">MachineryHub China</span>
+                </div>
+                
+                <!-- 导航菜单 Navigation Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html#home" class="hover:text-orange-400 transition">Home</a>
+                    <a href="products.html" class="hover:text-orange-400 transition">Products</a>
+                    <a href="index.html#solutions" class="hover:text-orange-400 transition">Solutions</a>
+                    <a href="index.html#factory" class="hover:text-orange-400 transition">Factory</a>
+                    <a href="index.html#about" class="hover:text-orange-400 transition">About</a>
+                    <a href="index.html#contact" class="text-orange-400 transition">Contact</a>
+                </div>
+                
+                <!-- 移动菜单按钮 Mobile Menu Button -->
+                <button class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 Hero Section -->
+    <section class="hero-gradient text-white py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="products.html" class="text-orange-400 hover:text-orange-300 text-sm font-semibold mb-4 inline-block">← Back to Products</a>
+                    <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+                        Other Industrial <span class="accent-text">Equipment</span>
+                    </h1>
+                    <p class="text-lg text-gray-300 max-w-2xl">
+                        Specialized machinery and solutions for various industrial applications and custom requirements
+                    </p>
+                </div>
+                <div class="hidden lg:block text-6xl">⚙️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品列表 Products -->
+    <section class="py-20 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 产品1: 激光切割机 -->
+            <div class="card-hover bg-white rounded-lg border border-gray-200 overflow-hidden mb-8 shadow-md hover:shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                    <!-- 图片 Image -->
+                    <div class="product-image">💡</div>
+                    
+                    <!-- 产品信息 Product Info -->
+                    <div class="md:col-span-2 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Laser Cutting Machine</h3>
+                            <div class="flex gap-4 mb-4 text-sm">
+                                <div>
+                                    <p class="text-gray-600">Model</p>
+                                    <p class="font-semibold text-gray-900">LC-1500</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">Power</p>
+                                    <p class="font-semibold text-gray-900">150W CO₂</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <p class="font-semibold text-gray-900 mb-3">Technical Highlights</p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Precision cutting and engraving in metal and non-metal materials</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Maximum cutting speed 200 mm/s with ±0.1mm accuracy</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Large work area: 1500×1000 mm with conveyor option</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Water-cooled system for continuous operation</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Auto-focus lens and smoke extraction included</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button class="btn-primary px-6 py-2 rounded-lg font-semibold">Request Quote</button>
+                            <button class="border-2 border-orange-400 text-orange-400 px-6 py-2 rounded-lg font-semibold hover:bg-orange-50">View Specs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品2: 数控钻床 -->
+            <div class="card-hover bg-white rounded-lg border border-gray-200 overflow-hidden mb-8 shadow-md hover:shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                    <!-- 图片 Image -->
+                    <div class="product-image">🔩</div>
+                    
+                    <!-- 产品信息 Product Info -->
+                    <div class="md:col-span-2 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">CNC Precision Drilling Machine</h3>
+                            <div class="flex gap-4 mb-4 text-sm">
+                                <div>
+                                    <p class="text-gray-600">Model</p>
+                                    <p class="font-semibold text-gray-900">CD-5000</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">Spindle</p>
+                                    <p class="font-semibold text-gray-900">24000 rpm</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <p class="font-semibold text-gray-900 mb-3">Technical Highlights</p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Multi-axis CNC control for complex hole patterns</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>±0.01mm positional accuracy with servo-controlled feed</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Automatic tool changer with 24-tool capacity</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Coolant delivery system for high-speed drilling</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Work area: 500×300×200 mm</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button class="btn-primary px-6 py-2 rounded-lg font-semibold">Request Quote</button>
+                            <button class="border-2 border-orange-400 text-orange-400 px-6 py-2 rounded-lg font-semibold hover:bg-orange-50">View Specs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品3: 液压折弯机 -->
+            <div class="card-hover bg-white rounded-lg border border-gray-200 overflow-hidden mb-8 shadow-md hover:shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                    <!-- 图片 Image -->
+                    <div class="product-image">📐</div>
+                    
+                    <!-- 产品信息 Product Info -->
+                    <div class="md:col-span-2 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Hydraulic Press Brake</h3>
+                            <div class="flex gap-4 mb-4 text-sm">
+                                <div>
+                                    <p class="text-gray-600">Model</p>
+                                    <p class="font-semibold text-gray-900">HP-4000</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">Max Force</p>
+                                    <p class="font-semibold text-gray-900">4000 kN</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <p class="font-semibold text-gray-900 mb-3">Technical Highlights</p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>CNC bending control with programmable bend sequences</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>±0.2° angle accuracy with synchronized dual pumps</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Sheet metal capacity: 4000×100 mm (mild steel)</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Adjustable back gauge with digital positioning</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Complete tool set with bend angle table included</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button class="btn-primary px-6 py-2 rounded-lg font-semibold">Request Quote</button>
+                            <button class="border-2 border-orange-400 text-orange-400 px-6 py-2 rounded-lg font-semibold hover:bg-orange-50">View Specs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品4: 贴标机 -->
+            <div class="card-hover bg-white rounded-lg border border-gray-200 overflow-hidden mb-8 shadow-md hover:shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                    <!-- 图片 Image -->
+                    <div class="product-image">🏷️</div>
+                    
+                    <!-- 产品信息 Product Info -->
+                    <div class="md:col-span-2 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Automatic Labeling Machine</h3>
+                            <div class="flex gap-4 mb-4 text-sm">
+                                <div>
+                                    <p class="text-gray-600">Model</p>
+                                    <p class="font-semibold text-gray-900">LM-800</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">Speed</p>
+                                    <p class="font-semibold text-gray-900">200-800 labels/min</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <p class="font-semibold text-gray-900 mb-3">Technical Highlights</p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Automatic label feed and precise position detection</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Works with bottles, boxes, and flat surfaces</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Label position error: ±2mm with servo control</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Vision system for product detection</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Touch screen HMI for easy parameter adjustment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button class="btn-primary px-6 py-2 rounded-lg font-semibold">Request Quote</button>
+                            <button class="border-2 border-orange-400 text-orange-400 px-6 py-2 rounded-lg font-semibold hover:bg-orange-50">View Specs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品5: 自动螺丝机 -->
+            <div class="card-hover bg-white rounded-lg border border-gray-200 overflow-hidden mb-8 shadow-md hover:shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                    <!-- 图片 Image -->
+                    <div class="product-image">🔧</div>
+                    
+                    <!-- 产品信息 Product Info -->
+                    <div class="md:col-span-2 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Automated Screw Fastening System</h3>
+                            <div class="flex gap-4 mb-4 text-sm">
+                                <div>
+                                    <p class="text-gray-600">Model</p>
+                                    <p class="font-semibold text-gray-900">SF-3000</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">Torque Control</p>
+                                    <p class="font-semibold text-gray-900">0.2 - 5.0 Nm</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <p class="font-semibold text-gray-900 mb-3">Technical Highlights</p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Multi-spindle design for simultaneous fastening</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>±5% torque accuracy with digital feedback</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Pneumatic or electric spindle options</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Integrated quality control with pass/fail indication</li>
+                                    <li class="flex items-start"><span class="accent-text mr-2 font-bold">•</span>Data logging for traceability and SPC</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button class="btn-primary px-6 py-2 rounded-lg font-semibold">Request Quote</button>
+                            <button class="border-2 border-orange-400 text-orange-400 px-6 py-2 rounded-lg font-semibold hover:bg-orange-50">View Specs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 定制解决方案 Custom Solutions -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg p-12 text-white">
+                <h2 class="text-3xl font-bold mb-4">Custom Equipment Solutions</h2>
+                <p class="text-gray-300 mb-6 text-lg">
+                    If you don't find exactly what you need in our catalog, our engineering team can design and build custom machinery solutions tailored to your specific requirements. We have expertise in:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="text-2xl mb-3">⚙️</div>
+                        <h3 class="font-bold text-lg mb-2">Assembly Automation</h3>
+                        <p class="text-gray-400">Robotic and conveyor-based systems for production lines</p>
+                    </div>
+                    <div>
+                        <div class="text-2xl mb-3">🤖</div>
+                        <h3 class="font-bold text-lg mb-2">Robotic Integration</h3>
+                        <p class="text-gray-400">Collaborative and industrial robots with custom programming</p>
+                    </div>
+                    <div>
+                        <div class="text-2xl mb-3">📊</div>
+                        <h3 class="font-bold text-lg mb-2">Smart Manufacturing</h3>
+                        <p class="text-gray-400">IoT-enabled systems with data collection and analytics</p>
+                    </div>
+                </div>
+                <a href="index.html#contact" class="mt-8 inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    Discuss Your Custom Needs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系 CTA -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Find Your Solution?</h2>
+            <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+                Contact us to request quotes, arrange factory visits, or discuss technical specifications with our engineering team
+            </p>
+            <a href="index.html#contact" class="btn-primary px-8 py-3 rounded-lg font-semibold inline-block">
+                Get In Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 Footer -->
+    <footer class="primary-bg text-gray-300 py-12 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- 公司信息 Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-6 h-6 accent-bg rounded-lg flex items-center justify-center font-bold text-white text-sm">M</div>
+                        <span class="font-bold text-white">MachineryHub</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Strategic machinery sourcing partner connecting global buyers with Chinese manufacturers.</p>
+                </div>
+                
+                <!-- 产品链接 Product Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Products</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="category-surface.html" class="hover:text-orange-400 transition">Metal Surface Treatment</a></li>
+                        <li><a href="category-tube.html" class="hover:text-orange-400 transition">Tube Processing</a></li>
+                        <li><a href="category-valve.html" class="hover:text-orange-400 transition">Valve & Fittings</a></li>
+                        <li><a href="category-other.html" class="hover:text-orange-400 transition">Industrial Equipment</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 公司链接 Company Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="index.html#about" class="hover:text-orange-400 transition">About Us</a></li>
+                        <li><a href="index.html#factory" class="hover:text-orange-400 transition">Factory Network</a></li>
+                        <li><a href="index.html#contact" class="hover:text-orange-400 transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 更新订阅 Newsletter -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Stay Updated</h4>
+                    <p class="text-sm text-gray-400 mb-3">Subscribe to our sourcing insights and industry news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="input-style px-3 py-2 rounded-l-lg bg-gray-700 text-white text-sm flex-1 placeholder-gray-400" required>
+                        <button type="submit" class="accent-bg px-4 py-2 rounded-r-lg font-semibold hover:bg-orange-600 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- 页脚底部 Footer Bottom -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-400">
+                        © 2024 MachineryHub China. All rights reserved. | Strategic Sourcing Partner for Mechanical Equipment
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                        <a href="#" class="hover:text-orange-400 transition">Terms of Service</a>
+                        <a href="#" class="hover:text-orange-400 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-orange-400 transition">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 平滑滚动脚本 Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 询价按钮点击处理
+        document.querySelectorAll('button:contains("Request Quote")').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Thank you! Redirecting to inquiry form...');
+                window.location.href = 'index.html#contact';
+            });
+        });
+    </script>
+</body>
+</html>

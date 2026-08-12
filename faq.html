@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - MachineryHub China</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 自定义颜色变量 */
+        :root {
+            --primary: #1f2937;    /* 深灰色 */
+            --accent: #f97316;     /* 橙色 */
+            --text-light: #f3f4f6; /* 浅灰色文本 */
+        }
+        
+        /* 工业简约风格 - 微妙阴影和边框 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #111827;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        }
+        
+        .accent-text {
+            color: #f97316;
+        }
+        
+        .accent-bg {
+            background-color: #f97316;
+        }
+        
+        .primary-bg {
+            background-color: #1f2937;
+        }
+        
+        .btn-primary {
+            background-color: #f97316;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(249, 115, 22, 0.3);
+        }
+        
+        /* 手风琴样式 */
+        .accordion-item {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-item:hover {
+            border-color: #f97316;
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.1);
+        }
+        
+        .accordion-header {
+            background-color: #f9fafb;
+            padding: 16px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1f2937;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-header:hover {
+            background-color: #f3f4f6;
+        }
+        
+        .accordion-header.active {
+            background-color: #f97316;
+            color: white;
+        }
+        
+        .accordion-icon {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #ffffff;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+            padding: 20px;
+        }
+        
+        .accordion-content p {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- 导航栏 Navigation Bar -->
+    <nav class="primary-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 accent-bg rounded-lg flex items-center justify-center font-bold text-white">M</div>
+                    <span class="font-bold text-lg hidden sm:inline">MachineryHub China</span>
+                </div>
+                
+                <!-- 导航菜单 Navigation Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html#home" class="hover:text-orange-400 transition">Home</a>
+                    <a href="index.html#products" class="hover:text-orange-400 transition">Products</a>
+                    <a href="faq.html" class="text-orange-400">FAQ</a>
+                    <a href="index.html#about" class="hover:text-orange-400 transition">About</a>
+                    <a href="index.html#contact" class="hover:text-orange-400 transition">Contact</a>
+                </div>
+                
+                <!-- 移动菜单按钮 Mobile Menu Button -->
+                <button class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 Hero Section -->
+    <section class="hero-gradient text-white py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+                Frequently Asked <span class="accent-text">Questions</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Find answers to common questions about our products, sourcing process, and services
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ 内容 FAQ Content -->
+    <section class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- FAQ 标题 -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">General Sourcing Questions</h2>
+                <p class="text-gray-600 text-lg">Get quick answers to streamline your procurement process</p>
+            </div>
+
+            <!-- 手风琴容器 Accordion Container -->
+            <div class="space-y-2">
+                
+                <!-- FAQ Item 1: MOQ -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What is your Minimum Order Quantity (MOQ)?</span>
+                        <div class="accordion-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Our <span class="highlight">MOQ varies by product category</span>:</p>
+                        <p>• <strong>Metal Surface Treatment Equipment:</strong> Starting from 1 unit for standard models</p>
+                        <p>• <strong>Tube Processing Equipment:</strong> Typically 1-2 units depending on specifications</p>
+                        <p>• <strong>Valve & Pipe Fittings:</strong> Bulk orders from 100 pieces recommended for better pricing</p>
+                        <p>• <strong>Custom Solutions:</strong> Negotiable based on project requirements and specifications</p>
+                        <p style="margin-top: 12px;">We understand that every business is different. Contact our sales team to discuss MOQ flexibility for your specific needs.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2: Lead Time -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What is the typical Lead Time for delivery?</span>
+                        <div class="accordion-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Production and delivery timelines depend on the product type and order complexity:</p>
+                        <p>• <strong>Standard Products (In-stock):</strong> 5-10 business days from payment confirmation</p>
+                        <p>• <strong>Semi-custom Orders:</strong> 15-25 days including production and quality inspection</p>
+                        <p>• <strong>Full Custom Solutions:</strong> 30-45 days for design review, manufacturing, and testing</p>
+                        <p>• <strong>Shipping Time:</strong> 7-30 days via Sea freight (depending on destination) or 3-7 days via Air freight</p>
+                        <p style="margin-top: 12px;">We provide detailed shipping schedules and milestone updates throughout the production cycle. Expedited options available upon request.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3: Payment Terms -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What payment methods and terms do you accept?</span>
+                        <div class="accordion-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We offer flexible payment options to accommodate different business requirements:</p>
+                        <p>• <strong>30% Deposit, 70% Before Shipment</strong> (Standard for orders above $10,000)</p>
+                        <p>• <strong>50% Deposit, 50% Against B/L Copy</strong> (FOB terms)</p>
+                        <p>• <strong>100% T/T Payment</strong> (For repeat customers with credit history)</p>
+                        <p>• <strong>LC at sight</strong> (Letter of Credit accepted for larger orders)</p>
+                        <p><strong>Accepted Payment Methods:</strong></p>
+                        <p>✓ Bank Transfer (T/T) - Most common and fastest<br>
+                        ✓ PayPal (for orders under $5,000)<br>
+                        ✓ Wire Transfer<br>
+                        ✓ Letter of Credit (L/C)</p>
+                        <p style="margin-top: 12px;">Payment is required to confirmed bank account details. All banking fees are buyer's responsibility unless otherwise negotiated.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4: Warranty -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What warranty and after-sales support do you provide?</span>
+                        <div class="accordion-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>Standard Warranty Coverage:</strong></p>
+                        <p>• <strong>12-Month Warranty:</strong> Against manufacturing defects from the shipping date</p>
+                        <p>• <strong>24-Month Warranty:</strong> Available for high-value equipment (upgradeable for additional cost)</p>
+                        <p>• <strong>Parts Support:</strong> Spare parts availability guaranteed for 5 years post-purchase</p>
+                        <p><strong>After-Sales Services:</strong></p>
+                        <p>✓ Free technical consultation and installation guidance<br>
+                        ✓ Remote troubleshooting via phone/video call<br>
+                        ✓ On-site support available (travel costs negotiable)<br>
+                        ✓ Quick response time: 24 hours for urgent issues<br>
+                        ✓ Comprehensive operation and maintenance manuals provided</p>
+                        <p style="margin-top: 12px;">Warranty excludes damage from misuse, improper installation, or normal wear and tear. Extended warranty plans available upon request.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5: Customization -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Can you customize products to our specifications?</span>
+                        <div class="accordion-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>Yes, we specialize in custom solutions.</strong> Our engineering team can work with your specifications:</p>
+                        <p>• <strong>Design Modifications:</strong> Size, capacity, voltage, material adjustments</p>
+                        <p>• <strong>Performance Customization:</strong> Speed, pressure, temperature range parameters</p>
+                        <p>• <strong>Interface Integration:</strong> Custom control systems, PLC integration, automation features</p>
+                        <p>• <strong>Branding & Packaging:</strong> Custom logos, labels, and packaging options available</p>
+                        <p><strong>Customization Process:</strong></p>
+                        <p>1. Submit detailed specifications and drawings<br>
+                        2. Receive engineering quotation and lead time estimate<br>
+                        3. Design review and approval (up to 2 revision rounds included)<br>
+                        4. Sample production and testing before full order</p>
+                        <p style="margin-top: 12px;">Minimum order for custom products is typically higher. Please contact us with your requirements for a detailed proposal.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6: Shipping & Logistics -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What shipping methods and packaging do you offer?</span>
+                        <div class="accordion-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>Shipping Options:</strong></p>
+                        <p>• <strong>Sea Freight (FCL/LCL):</strong> Most economical, 7-30 days to major ports worldwide</p>
+                        <p>• <strong>Air Freight:</strong> Faster delivery, 3-7 days, suitable for urgent orders</p>
+                        <p>• <strong>Express Courier:</strong> Small items only, 1-3 days international delivery</p>
+                        <p>• <strong>Rail/Truck:</strong> To neighboring Asian countries, cost-effective option</p>
+                        <p><strong>Packaging Standards:</strong></p>
+                        <p>✓ Professional wooden crates for machinery (shock-absorbing padding included)<br>
+                        ✓ Weather-resistant packaging for sea transportation<br>
+                        ✓ All equipment tested and function verified before packaging<br>
+                        ✓ Comprehensive packing list and documentation included<br>
+                        ✓ Insurance coverage available (customer's option)</p>
+                        <p style="margin-top: 12px;">We handle all logistics coordination. Incoterms: FOB Shanghai, CIF, or DDP available. Free shipping insurance for orders over $50,000.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7: Certification & Standards -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What certifications and quality standards do you have?</span>
+                        <div class="accordion-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>International Certifications:</strong></p>
+                        <p>✓ ISO 9001:2015 - Quality Management System<br>
+                        ✓ ISO 14001:2015 - Environmental Management<br>
+                        ✓ CE Mark - European safety standards compliance<br>
+                        ✓ RoHS Compliant - Hazardous substance restrictions<br>
+                        ✓ SGS/BV Inspection Report available upon request</p>
+                        <p><strong>Quality Assurance:</strong></p>
+                        <p>• Every equipment undergoes rigorous testing before shipment</p>
+                        <p>• Third-party inspection available (SGS, BV, TUV, etc.)</p>
+                        <p>• Complete technical documentation and compliance certificates provided</p>
+                        <p>• Certificates of Origin, Anti-Dumping Documentation available</p>
+                        <p style="margin-top: 12px;">Our factories are regularly audited and compliant with international trade regulations. We can provide manufacturer certificates for any specific industry requirements.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8: Supply Reliability -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>How can I ensure reliability and avoid supply chain risks?</span>
+                        <div class="accordion-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p><strong>Our Reliability Measures:</strong></p>
+                        <p>• Established partnerships with 15+ certified manufacturing facilities</p>
+                        <p>• Factory audits available for first-time buyers (schedule in advance)</p>
+                        <p>• Real-time production tracking and milestone updates</p>
+                        <p>• Quality inspection photos/videos provided during manufacturing</p>
+                        <p>• Multi-source capability to ensure continuous supply</p>
+                        <p><strong>Risk Mitigation:</strong></p>
+                        <p>✓ Long-term supply contracts with guaranteed pricing and lead times<br>
+                        ✓ Safety stock programs for essential components<br>
+                        ✓ Flexible payment terms for bulk/recurring orders<br>
+                        ✓ Emergency expedited production for urgent needs<br>
+                        ✓ Dedicated account manager for accounts over $50K annually</p>
+                        <p style="margin-top: 12px;">We are committed to being a stable, long-term sourcing partner. Request references from our existing clients - we're happy to connect you!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 联系CTA Contact CTA -->
+            <div class="mt-16 bg-gradient-to-r from-gray-100 to-gray-50 rounded-lg p-8 text-center border-2 border-orange-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">Didn't find your answer?</h3>
+                <p class="text-gray-600 mb-6">Our sourcing specialists are ready to help with your specific inquiry</p>
+                <a href="index.html#contact" class="btn-primary px-8 py-3 rounded-lg font-semibold inline-block">
+                    Contact Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 Footer -->
+    <footer class="primary-bg text-gray-300 py-12 border-t border-gray-700 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- 公司信息 Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-6 h-6 accent-bg rounded-lg flex items-center justify-center font-bold text-white text-sm">M</div>
+                        <span class="font-bold text-white">MachineryHub</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Strategic machinery sourcing partner connecting global buyers with Chinese manufacturers.</p>
+                </div>
+                
+                <!-- 产品链接 Product Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Products</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="index.html#products" class="hover:text-orange-400 transition">Metal Surface Treatment</a></li>
+                        <li><a href="index.html#products" class="hover:text-orange-400 transition">Tube Processing</a></li>
+                        <li><a href="index.html#products" class="hover:text-orange-400 transition">Valve & Fittings</a></li>
+                        <li><a href="index.html#products" class="hover:text-orange-400 transition">Industrial Equipment</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 公司链接 Company Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="index.html#about" class="hover:text-orange-400 transition">About Us</a></li>
+                        <li><a href="faq.html" class="hover:text-orange-400 transition">FAQ</a></li>
+                        <li><a href="index.html#contact" class="hover:text-orange-400 transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 联系方式 Contact Info -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Get In Touch</h4>
+                    <p class="text-sm text-gray-400 mb-2">📧 inquiry@machineryhub-china.com</p>
+                    <p class="text-sm text-gray-400 mb-2">📞 +86 (XXX) XXXX-XXXX</p>
+                    <p class="text-sm text-gray-400">📍 Shanghai, China</p>
+                </div>
+            </div>
+            
+            <!-- 页脚底部 Footer Bottom -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-400">
+                        © 2024 MachineryHub China. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                        <a href="#" class="hover:text-orange-400 transition">Terms of Service</a>
+                        <a href="#" class="hover:text-orange-400 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-orange-400 transition">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 手风琴交互脚本 Accordion Interaction Script -->
+    <script>
+        function toggleAccordion(headerElement) {
+            // 获取当前的 content 元素
+            const content = headerElement.nextElementSibling;
+            
+            // 检查是否已激活
+            const isActive = headerElement.classList.contains('active');
+            
+            // 关闭所有其他的手风琴项
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                if (header !== headerElement) {
+                    header.classList.remove('active');
+                    header.nextElementSibling.classList.remove('active');
+                }
+            });
+            
+            // 切换当前项
+            if (isActive) {
+                headerElement.classList.remove('active');
+                content.classList.remove('active');
+            } else {
+                headerElement.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

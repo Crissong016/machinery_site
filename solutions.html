@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Solutions - MachineryHub China</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 自定义颜色变量 */
+        :root {
+            --primary: #1f2937;    /* 深灰色 */
+            --accent: #f97316;     /* 橙色 */
+            --text-light: #f3f4f6; /* 浅灰色文本 */
+        }
+        
+        /* 工业简约风格 - 微妙阴影和边框 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #111827;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        .accent-text {
+            color: #f97316;
+        }
+        
+        .accent-bg {
+            background-color: #f97316;
+        }
+        
+        .primary-bg {
+            background-color: #1f2937;
+        }
+        
+        .btn-primary {
+            background-color: #f97316;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(249, 115, 22, 0.3);
+        }
+        
+        .input-style {
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .input-style:focus {
+            border-color: #f97316;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        }
+
+        .solution-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+
+        .solution-header {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            padding: 40px 30px;
+            color: white;
+        }
+
+        .equipment-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .equipment-item {
+            background: #f9fafb;
+            border-left: 4px solid #f97316;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .scenario-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+        }
+
+        .scenario-icon {
+            color: #f97316;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .scenario-text {
+            color: #4b5563;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- 导航栏 Navigation Bar -->
+    <nav class="primary-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 accent-bg rounded-lg flex items-center justify-center font-bold text-white">M</div>
+                    <span class="font-bold text-lg hidden sm:inline">MachineryHub China</span>
+                </div>
+                
+                <!-- 导航菜单 Navigation Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html#home" class="hover:text-orange-400 transition">Home</a>
+                    <a href="index.html#products" class="hover:text-orange-400 transition">Products</a>
+                    <a href="solutions.html" class="text-orange-400 transition">Solutions</a>
+                    <a href="index.html#factory" class="hover:text-orange-400 transition">Factory</a>
+                    <a href="index.html#about" class="hover:text-orange-400 transition">About</a>
+                    <a href="index.html#contact" class="hover:text-orange-400 transition">Contact</a>
+                </div>
+                
+                <!-- 移动菜单按钮 Mobile Menu Button -->
+                <button class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 Hero Section -->
+    <section id="solutions-hero" class="hero-gradient text-white py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Industrial <span class="accent-text">Solutions</span> for<br>Precision Manufacturing
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive turnkey solutions for tube processing and metal surface finishing, designed to enhance your production efficiency and product quality.
+            </p>
+        </div>
+    </section>
+
+    <!-- 解决方案详情 Solutions Details -->
+    <section id="solutions-detail" class="py-20 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 标题 Section Title -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                    <span class="text-gray-900">Complete</span> <span class="accent-text">Solution Portfolio</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    We offer end-to-end solutions with quality-assured equipment and comprehensive technical support
+                </p>
+            </div>
+
+            <!-- Solution 1: EV Tube Processing Solution -->
+            <div class="solution-card mb-12">
+                <div class="solution-header">
+                    <h3 class="text-3xl font-bold mb-2">🚗 EV Tube Processing Solution</h3>
+                    <p class="text-gray-200 text-lg">Cutting & Bending Complete Equipment Set for Electric Vehicle Frame Tubes</p>
+                </div>
+                
+                <div class="p-8 sm:p-10">
+                    <!-- Solution Description -->
+                    <div class="mb-10">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-2 h-8 accent-bg mr-3 rounded"></span>
+                            Solution Overview
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Our EV Tube Processing Solution is specifically designed for cutting and bending operations on hollow structural tubes used in electric vehicle frames. This integrated system combines precision cutting, accurate bending, and quality control in a seamless workflow, helping manufacturers achieve consistent tube specifications while reducing waste and production time.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            The solution supports various tube materials including steel, aluminum, and stainless steel with tube diameters ranging from 25mm to 120mm, making it versatile for different EV frame designs.
+                        </p>
+                    </div>
+
+                    <!-- Equipment List -->
+                    <div class="mb-10">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-2 h-8 accent-bg mr-3 rounded"></span>
+                            Equipment Lineup
+                        </h4>
+                        <div class="equipment-list">
+                            <div class="equipment-item">
+                                <span class="font-semibold">📌 Automatic Tube Cutting Machine</span><br>
+                                <span class="text-xs text-gray-600">Precision blade with ±0.5mm tolerance</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">🔧 CNC Tube Bending Machine</span><br>
+                                <span class="text-xs text-gray-600">Multi-axis with 0.1mm position accuracy</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">✓ Vision Inspection System</span><br>
+                                <span class="text-xs text-gray-600">Real-time defect detection & measurement</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">🔄 Automatic Feeding System</span><br>
+                                <span class="text-xs text-gray-600">Robotic loading and unloading</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">📊 MES Control System</span><br>
+                                <span class="text-xs text-gray-600">Production data tracking & analytics</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">🛡️ Deburring & Cleaning Unit</span><br>
+                                <span class="text-xs text-gray-600">Automatic edge finishing system</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application Scenarios -->
+                    <div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-2 h-8 accent-bg mr-3 rounded"></span>
+                            Application Scenarios
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="scenario-item">
+                                <div class="scenario-icon">⚡</div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">EV Main Frame Manufacturing</div>
+                                    <div class="scenario-text">Production of A/B/C pillar tubes, side impact beams, and structural reinforcement members for battery electric vehicles</div>
+                                </div>
+                            </div>
+                            <div class="scenario-item">
+                                <div class="scenario-icon">🔋</div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Battery Pack Support Structure</div>
+                                    <div class="scenario-text">Fabrication of battery mounting frames and protective cage structures with high precision bending angles</div>
+                                </div>
+                            </div>
+                            <div class="scenario-item">
+                                <div class="scenario-icon">🏭</div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Commercial Vehicle Assembly</div>
+                                    <div class="scenario-text">Medium to high-volume production for commercial EV platforms with changeable bend profiles and cutting lengths</div>
+                                </div>
+                            </div>
+                            <div class="scenario-item">
+                                <div class="scenario-icon">🎯</div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Just-In-Time Production</div>
+                                    <div class="scenario-text">Flexible scheduling for mixed-model production supporting different vehicle variants with minimal setup time</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 2: Metal Surface Finishing Line -->
+            <div class="solution-card">
+                <div class="solution-header">
+                    <h3 class="text-3xl font-bold mb-2">✨ Metal Surface Finishing Line</h3>
+                    <p class="text-gray-200 text-lg">Automatic Polishing & Derusting Line for Round Steel and Bar Stock</p>
+                </div>
+                
+                <div class="p-8 sm:p-10">
+                    <!-- Solution Description -->
+                    <div class="mb-10">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-2 h-8 accent-bg mr-3 rounded"></span>
+                            Solution Overview
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Our Metal Surface Finishing Line delivers fully automated polishing and derusting solutions for round steel, bars, and other linear metal stock. This comprehensive system removes rust, scale, and surface contamination while simultaneously polishing to achieve consistent surface finish quality, significantly improving product appearance and corrosion resistance.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Designed for continuous production with high throughput, the line processes diameter ranges from 8mm to 60mm and can handle various steel grades, stainless steel, and aluminum materials with minimal manual intervention.
+                        </p>
+                    </div>
+
+                    <!-- Equipment List -->
+                    <div class="mb-10">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-2 h-8 accent-bg mr-3 rounded"></span>
+                            Equipment Lineup
+                        </h4>
+                        <div class="equipment-list">
+                            <div class="equipment-item">
+                                <span class="font-semibold">🔨 Wire Brush Derusting Module</span><br>
+                                <span class="text-xs text-gray-600">Multi-spindle brush heads, 100-200 rpm</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">🪨 Abrasive Polishing Station</span><br>
+                                <span class="text-xs text-gray-600">Sandpaper and emery cloth options</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">💧 Washing & Drying System</span><br>
+                                <span class="text-xs text-gray-600">High-pressure spray and hot air drying</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">🔄 Continuous Conveyor Track</span><br>
+                                <span class="text-xs text-gray-600">Variable speed 5-30 m/min, PLC controlled</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">📐 Automatic Diameter Detection</span><br>
+                                <span class="text-xs text-gray-600">Laser sensor for adaptive processing</span>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="font-semibold">📦 Automatic Stacking System</span><br>
+                                <span class="text-xs text-gray-600">Bundling and material handling</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application Scenarios -->
+                    <div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-2 h-8 accent-bg mr-3 rounded"></span>
+                            Application Scenarios
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="scenario-item">
+                                <div class="scenario-icon">🔩</div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Fastener & Bolt Finishing</div>
+                                    <div class="scenario-text">Pre-finishing of bolt blanks and bar stock before threading or galvanizing to ensure clean surfaces and improved coating adhesion</div>
+                                </div>
+                            </div>
+                            <div class="scenario-item">
+                                <div class="scenario-icon">🏗️</div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Construction Steel Processing</div>
+                                    <div class="scenario-text">Large-scale processing of structural bar and rebar for construction applications, removing mill scale and surface impurities</div>
+                                </div>
+                            </div>
+                            <div class="scenario-item">
+                                <div class="scenario-icon">⚙️</div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Machinery Component Preparation</div>
+                                    <div class="scenario-text">Pre-treatment of shafts, spindles, and rods for machining operations requiring clean, rust-free material</div>
+                                </div>
+                            </div>
+                            <div class="scenario-item">
+                                <div class="scenario-icon">✨</div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Premium Surface Finish Products</div>
+                                    <div class="scenario-text">Production of decorative metal bars and tubes with mirror-polished surfaces for architectural and consumer applications</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 方案优势 Solution Advantages -->
+    <section id="advantages" class="py-20 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                    Why Choose Our <span class="accent-text">Solutions?</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">High Precision</h3>
+                    <p class="text-gray-700 text-sm">±0.1mm-0.5mm tolerance across all equipment ensures consistent product quality and reduced rework</p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">High Throughput</h3>
+                    <p class="text-gray-700 text-sm">Production rates from 30-150+ pieces/hour depending on specifications, maximizing output per shift</p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Full Automation</h3>
+                    <p class="text-gray-700 text-sm">Minimized manual labor and operator dependency, improving workplace safety and cost efficiency</p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Cost Savings</h3>
+                    <p class="text-gray-700 text-sm">Reduced material waste, lower labor costs, and faster ROI through optimized production processes</p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Flexible Design</h3>
+                    <p class="text-gray-700 text-sm">Customizable configurations for various material types, sizes, and production requirements</p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                    <div class="text-4xl mb-4">📞</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Full Support</h3>
+                    <p class="text-gray-700 text-sm">Installation, training, maintenance programs, and spare parts availability for long-term partnership</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行动呼吁 Call to Action -->
+    <section id="cta-solutions" class="hero-gradient text-white py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Transform Your Production?</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let our industrial solutions help you achieve better quality, higher throughput, and lower costs. Contact our solution engineers today.
+            </p>
+            <a href="index.html#contact" class="btn-primary px-8 py-3 rounded-lg font-semibold inline-block">
+                Request a Solution Demo
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 Footer -->
+    <footer class="primary-bg text-gray-300 py-12 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- 公司信息 Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-6 h-6 accent-bg rounded-lg flex items-center justify-center font-bold text-white text-sm">M</div>
+                        <span class="font-bold text-white">MachineryHub</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Strategic machinery sourcing partner connecting global buyers with Chinese manufacturers.</p>
+                </div>
+                
+                <!-- 产品链接 Product Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Products</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="index.html#products" class="hover:text-orange-400 transition">Metal Surface Treatment</a></li>
+                        <li><a href="index.html#products" class="hover:text-orange-400 transition">Tube Processing</a></li>
+                        <li><a href="index.html#products" class="hover:text-orange-400 transition">Valve & Fittings</a></li>
+                        <li><a href="index.html#products" class="hover:text-orange-400 transition">Industrial Equipment</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 公司链接 Company Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="index.html#about" class="hover:text-orange-400 transition">About Us</a></li>
+                        <li><a href="index.html#factory" class="hover:text-orange-400 transition">Factory Network</a></li>
+                        <li><a href="solutions.html" class="hover:text-orange-400 transition">Solutions</a></li>
+                        <li><a href="index.html#contact" class="hover:text-orange-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 更新订阅 Newsletter -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Stay Updated</h4>
+                    <p class="text-sm text-gray-400 mb-3">Subscribe to our sourcing insights and industry news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="input-style px-3 py-2 rounded-l-lg bg-gray-700 text-white text-sm flex-1 placeholder-gray-400" required>
+                        <button type="submit" class="accent-bg px-4 py-2 rounded-r-lg font-semibold hover:bg-orange-600 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- 页脚底部 Footer Bottom -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-400">
+                        © 2024 MachineryHub China. All rights reserved. | Strategic Sourcing Partner for Mechanical Equipment
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                        <a href="#" class="hover:text-orange-400 transition">Terms of Service</a>
+                        <a href="#" class="hover:text-orange-400 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-orange-400 transition">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 平滑滚动脚本 Smooth Scrolling Script -->
+    <script>
+        // 平滑滚动实现 Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
