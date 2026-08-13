@@ -84,19 +84,41 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
                     <div class="w-8 h-8 accent-bg rounded-lg flex items-center justify-center font-bold text-white">M</div>
                     <span class="font-bold text-lg hidden sm:inline">VISTA MACHINERY</span>
                 </div>
                 
                 <!-- 导航菜单 Navigation Menu -->
-                <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="index.html" class="hover:text-orange-400 transition">Home</a>
-                    <a href="products.html" class="hover:text-orange-400 transition">Products</a>
-                    <a href="solutions.html" class="hover:text-orange-400 transition">Solutions</a>
-                    <a href="factory-cooperation.html" class="hover:text-orange-400 transition">Factory</a>
-                    <a href="about.html" class="hover:text-orange-400 transition">About</a>
-                    <a href="contact.html" class="text-orange-400 transition">Contact</a>
-                </div>
+                <!-- 导航菜单 Navigation Menu (修正版) -->
+<div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+    <a href="index.html" class="hover:text-orange-400 transition">Home</a>
+
+    <!-- Products 下拉菜单 -->
+    <div class="relative group">
+        <a href="products.html" class="text-orange-400 flex items-center gap-1 py-5">
+            Products
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </a>
+        
+        <!-- 下拉菜单内容 -->
+        <div class="absolute left-0 w-64 bg-white rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-orange-500">
+            <div class="py-2">
+                <a href="category-surface.html" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition">Metal Surface Treatment</a>
+                <a href="category-tube.html" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition">Tube Processing Equipment</a>
+                <a href="category-valve.html" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition">Valves & Fittings</a>
+                <a href="category-other.html" class="block px-6 py-3 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition">Other Industrial Equipment</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="solutions.html" class="hover:text-orange-400 transition">Solutions</a>
+    <a href="factory-cooperation.html" class="hover:text-orange-400 transition">Factory</a>
+    <a href="about.html" class="hover:text-orange-400 transition">About</a>
+    <a href="contact.html" class="hover:text-orange-400 transition">Contact</a>
+</div>
                 
                 <!-- 移动菜单按钮 Mobile Menu Button -->
                 <button class="md:hidden text-white p-2">
@@ -429,5 +451,14 @@
             });
         });
     </script>
+<!-- 修正版：悬浮 WhatsApp 按钮 -->
+<a href="https://wa.me/8618953318515" target="_blank" 
+   class="fixed bottom-6 right-6 z-[9999] w-20 h-20 bg-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 border border-gray-100" 
+   title="Chat on WhatsApp">
+    <!-- 使用 viewBox 确保比例永远是 1:1 -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-14 h-14" style="fill: #25D366;">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.3-14.6-27.4-32.7-30.5-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+</a>
 </body>
 </html>
