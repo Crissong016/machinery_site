@@ -140,12 +140,12 @@
     <a href="index.html" class="hover:text-orange-400 transition">Home</a>
 
     <!-- Products 下拉菜单 -->
-    <div class="relative group">
-        <a href="products.html" class="text-orange-400 flex items-center gap-1 py-5">
-            Products
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+<div class="relative group">
+    <a href="products.html" class="hover:text-orange-400 transition flex items-center gap-1 py-5">
+        Products
+        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
         </a>
         
         <!-- 下拉菜单内容 -->
@@ -161,7 +161,7 @@
 
     <a href="solutions.html" class="hover:text-orange-400 transition">Solutions</a>
     <a href="factory-cooperation.html" class="hover:text-orange-400 transition">Factory</a>
-    <a href="about.html" class="hover:text-orange-400 transition">About</a>
+    <a href="about.html" class="text-orange-400">About</a>
     <a href="contact.html" class="hover:text-orange-400 transition">Contact</a>
 </div>
                 
@@ -406,11 +406,11 @@
         </div>
     </section>
 
-    <!-- 页脚 Footer -->
-    <footer class="primary-bg text-gray-300 py-12 border-t border-gray-700 mt-16">
+    <!-- 页脚 Footer (全站统一标准版) -->
+    <footer class="primary-bg text-gray-300 py-12 border-t border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- 公司信息 Company Info -->
+                <!-- 1. 公司信息 Company Info -->
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
                         <div class="w-6 h-6 accent-bg rounded-lg flex items-center justify-center font-bold text-white text-sm">M</div>
@@ -419,42 +419,44 @@
                     <p class="text-sm text-gray-400">Strategic machinery sourcing partner connecting global buyers with Chinese manufacturers.</p>
                 </div>
                 
-                <!-- 产品链接 Product Links -->
+                <!-- 2. 产品链接 Product Links -->
                 <div>
                     <h4 class="font-semibold text-white mb-4">Products</h4>
                     <ul class="text-sm space-y-2">
-                        <li><a href="products.html" class="hover:text-orange-400 transition">Metal Surface Treatment</a></li>
-                        <li><a href="products.html" class="hover:text-orange-400 transition">Tube Processing</a></li>
-                        <li><a href="products.html" class="hover:text-orange-400 transition">Valve & Fittings</a></li>
-                        <li><a href="products.html" class="hover:text-orange-400 transition">Industrial Equipment</a></li>
+                        <li><a href="category-surface.html" class="hover:text-orange-400 transition">Surface Treatment</a></li>
+                        <li><a href="category-tube.html" class="hover:text-orange-400 transition">Tube Processing</a></li>
+                        <li><a href="category-valve.html" class="hover:text-orange-400 transition">Valves & Fittings</a></li>
+                        <li><a href="category-other.html" class="hover:text-orange-400 transition">Other Equipment</a></li>
                     </ul>
                 </div>
                 
-                <!-- 公司链接 Company Links -->
+                <!-- 3. 公司链接 Company Links -->
                 <div>
                     <h4 class="font-semibold text-white mb-4">Company</h4>
                     <ul class="text-sm space-y-2">
                         <li><a href="about.html" class="hover:text-orange-400 transition">About Us</a></li>
-                        <li><a href="faq.html" class="hover:text-orange-400 transition">FAQ</a></li>
+                        <li><a href="factory-cooperation.html" class="hover:text-orange-400 transition">Factory Network</a></li>
                         <li><a href="contact.html" class="hover:text-orange-400 transition">Contact Us</a></li>
-                        <li><a href="faq.html" class="hover:text-orange-400 transition">Privacy Policy</a></li>
+                        <li><a href="faq.html" class="hover:text-orange-400 transition">FAQ</a></li>
                     </ul>
                 </div>
                 
-                <!-- 联系方式 Contact Info -->
+                <!-- 4. 更新订阅 Newsletter -->
                 <div>
-                    <h4 class="font-semibold text-white mb-4">Get In Touch</h4>
-                    <p class="text-sm text-gray-400 mb-2">📧 inquiry@zibovista.com</p>
-                    <p class="text-sm text-gray-400 mb-2">📞 +86 189 5331 8515</p>
-                    <p class="text-sm text-gray-400">📍 Zibo, China</p>
+                    <h4 class="font-semibold text-white mb-4">Stay Updated</h4>
+                    <p class="text-sm text-gray-400 mb-3">Subscribe to our sourcing insights and industry news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="input-style px-3 py-2 rounded-l-lg bg-gray-700 text-white text-sm flex-1 placeholder-gray-400 focus:outline-none" required>
+                        <button type="submit" class="accent-bg px-4 py-2 rounded-r-lg font-semibold hover:bg-orange-600 transition">Subscribe</button>
+                    </form>
                 </div>
             </div>
             
-            <!-- 页脚底部 Footer Bottom -->
+            <!-- 页脚底部 Footer Bottom (解决图4排版混乱的关键) -->
             <div class="border-t border-gray-700 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-sm text-gray-400">
-                        © 2024 VISTA MACHINERY. All rights reserved.
+                    <p class="text-sm text-gray-400 text-center md:text-left">
+                        © 2024 VISTA MACHINERY. All rights reserved. | Strategic Sourcing Partner for Mechanical Equipment
                     </p>
                     <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
                         <a href="faq.html" class="hover:text-orange-400 transition">Terms of Service</a>

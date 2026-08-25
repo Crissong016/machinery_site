@@ -115,12 +115,12 @@
     <a href="index.html" class="hover:text-orange-400 transition">Home</a>
 
     <!-- Products 下拉菜单 -->
-    <div class="relative group">
-        <a href="products.html" class="text-orange-400 flex items-center gap-1 py-5">
-            Products
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+<div class="relative group">
+    <a href="products.html" class="hover:text-orange-400 transition flex items-center gap-1 py-5">
+        Products
+        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
         </a>
         
         <!-- 下拉菜单内容 -->
@@ -137,7 +137,7 @@
     <a href="solutions.html" class="hover:text-orange-400 transition">Solutions</a>
     <a href="factory-cooperation.html" class="hover:text-orange-400 transition">Factory</a>
     <a href="about.html" class="hover:text-orange-400 transition">About</a>
-    <a href="contact.html" class="hover:text-orange-400 transition">Contact</a>
+    <a href="contact.html" class="text-orange-400">Contact</a>
 </div>
                 
                 <!-- 移动菜单按钮 Mobile Menu Button -->
@@ -323,17 +323,22 @@
             <p class="text-lg text-gray-300 mb-8">
                 Connect with us on WhatsApp for instant responses and quick queries about our machinery solutions.
             </p>
-            <a href="https://wa.me/8618953318515" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 btn-whatsapp rounded-lg font-bold text-lg hover:shadow-lg">
-                <span>💬</span> Start WhatsApp Chat Now
-            </a>
+            <!-- 修改后的 CTA 按钮 -->
+<a href="https://wa.me/8618953318515" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 btn-whatsapp rounded-lg font-bold text-lg hover:shadow-lg transition-all">
+    <!-- 官方 WhatsApp 图标 (白色版) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 fill-white">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.3-14.6-27.4-32.7-30.5-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+    Start WhatsApp Chat Now
+</a>
         </div>
     </section>
 
-    <!-- 页脚 Footer -->
+    <!-- 页脚 Footer (全站统一标准版) -->
     <footer class="primary-bg text-gray-300 py-12 border-t border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- 公司信息 Company Info -->
+                <!-- 1. 公司信息 Company Info -->
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
                         <div class="w-6 h-6 accent-bg rounded-lg flex items-center justify-center font-bold text-white text-sm">M</div>
@@ -342,61 +347,43 @@
                     <p class="text-sm text-gray-400">Strategic machinery sourcing partner connecting global buyers with Chinese manufacturers.</p>
                 </div>
                 
-                <!-- 产品链接 Product Links -->
+                <!-- 2. 产品链接 Product Links -->
                 <div>
                     <h4 class="font-semibold text-white mb-4">Products</h4>
                     <ul class="text-sm space-y-2">
-                        <li><a href="products.html" class="hover:text-orange-400 transition">Metal Surface Treatment</a></li>
-                        <li><a href="products.html" class="hover:text-orange-400 transition">Tube Processing</a></li>
-                        <li><a href="products.html" class="hover:text-orange-400 transition">Valve & Fittings</a></li>
-                        <li><a href="products.html" class="hover:text-orange-400 transition">Industrial Equipment</a></li>
+                        <li><a href="category-surface.html" class="hover:text-orange-400 transition">Surface Treatment</a></li>
+                        <li><a href="category-tube.html" class="hover:text-orange-400 transition">Tube Processing</a></li>
+                        <li><a href="category-valve.html" class="hover:text-orange-400 transition">Valves & Fittings</a></li>
+                        <li><a href="category-other.html" class="hover:text-orange-400 transition">Other Equipment</a></li>
                     </ul>
                 </div>
                 
-                <!-- 公司链接 Company Links -->
+                <!-- 3. 公司链接 Company Links -->
                 <div>
                     <h4 class="font-semibold text-white mb-4">Company</h4>
                     <ul class="text-sm space-y-2">
                         <li><a href="about.html" class="hover:text-orange-400 transition">About Us</a></li>
                         <li><a href="factory-cooperation.html" class="hover:text-orange-400 transition">Factory Network</a></li>
                         <li><a href="contact.html" class="hover:text-orange-400 transition">Contact Us</a></li>
-                        <li><a href="faq.html" class="hover:text-orange-400 transition">Privacy Policy</a></li>
+                        <li><a href="faq.html" class="hover:text-orange-400 transition">FAQ</a></li>
                     </ul>
                 </div>
                 
-                <!-- 快速联系 Quick Contact -->
-                <!-- 替换 contact.html 第 265-275 行左右的内容 -->
-<div>
-    <h4 class="font-semibold text-white mb-4">Quick Contact</h4>
-    <div class="text-sm text-gray-400 space-y-4">
-        <!-- Email 行 -->
-        <div class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-            <a href="mailto:inquiry@zibovista.com" class="hover:text-orange-400 transition">inquiry@zibovista.com</a>
-        </div>
-        <!-- WhatsApp 行 -->
-        <div class="flex items-center gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6" style="fill: #25D366;">
-                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.3-14.6-27.4-32.7-30.5-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-            </svg>
-            <a href="https://wa.me/8618953318515" target="_blank" class="hover:text-orange-400 transition">+86 189 5331 8515</a>
-        </div>
-    </div>
-    <!-- 按钮部分 -->
-    <a href="https://wa.me/8618953318515" target="_blank" class="mt-4 inline-flex items-center gap-2 px-4 py-2 btn-whatsapp rounded-lg font-semibold text-sm">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-white">
-            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.3-14.6-27.4-32.7-30.5-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-        </svg>
-        Chat Now
-    </a>
-</div>
+                <!-- 4. 更新订阅 Newsletter -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Stay Updated</h4>
+                    <p class="text-sm text-gray-400 mb-3">Subscribe to our sourcing insights and industry news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="input-style px-3 py-2 rounded-l-lg bg-gray-700 text-white text-sm flex-1 placeholder-gray-400 focus:outline-none" required>
+                        <button type="submit" class="accent-bg px-4 py-2 rounded-r-lg font-semibold hover:bg-orange-600 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
             
-            <!-- 页脚底部 Footer Bottom -->
+            <!-- 页脚底部 Footer Bottom (解决图4排版混乱的关键) -->
             <div class="border-t border-gray-700 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-sm text-gray-400">
+                    <p class="text-sm text-gray-400 text-center md:text-left">
                         © 2024 VISTA MACHINERY. All rights reserved. | Strategic Sourcing Partner for Mechanical Equipment
                     </p>
                     <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
